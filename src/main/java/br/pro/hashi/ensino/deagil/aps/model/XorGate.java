@@ -1,6 +1,10 @@
-package br.pro.hashi.ensino.desagil.aps.model;
+package br.pro.hashi.ensino.deagil.aps.model;
 
-public class XorGate extends Gate{
+import br.pro.hashi.ensino.deagil.aps.model.Emitter;
+import br.pro.hashi.ensino.deagil.aps.model.Gate;
+import br.pro.hashi.ensino.deagil.aps.model.NandGate;
+
+public class XorGate extends Gate {
     private final NandGate nandMid;
     private final NandGate nandTop;
     private final NandGate nandBottom;

@@ -1,5 +1,6 @@
-package br.pro.hashi.ensino.desagil.aps.model;
+package br.pro.hashi.ensino.desagil.aps;
 
+import br.pro.hashi.ensino.deagil.aps.model.XorGate;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

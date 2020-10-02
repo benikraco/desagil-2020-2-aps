@@ -1,4 +1,4 @@
-package br.pro.hashi.ensino.desagil.aps.model;
+package br.pro.hashi.ensino.deagil.aps.model;
 
 public abstract class Gate implements Emitter, Receiver {
     private final String name;
