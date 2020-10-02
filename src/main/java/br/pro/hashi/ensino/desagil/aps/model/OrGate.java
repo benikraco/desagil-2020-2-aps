@@ -32,6 +32,7 @@ public class OrGate extends Gate {
             case 1:
                 nandB.connect(0,emitter);
                 nandB.connect(1,emitter);
+                break;
             default:
                 throw new IndexOutOfBoundsException(inputIndex);
         }
