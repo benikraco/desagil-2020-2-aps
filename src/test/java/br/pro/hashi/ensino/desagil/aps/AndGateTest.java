@@ -1,36 +1,37 @@
-package br.pro.hashi.ensino.desagil.aps.model;
+package br.pro.hashi.ensino.desagil.aps;
 
+import br.pro.hashi.ensino.deagil.aps.model.AndGate;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class OrGateTest {
+public class AndGateTest {
     @Test
     public void whenReceivingFalseAndFalseShouldReturnFalse() {
-        OrGate gate = new OrGate();
+        AndGate gate = new AndGate();
         gate.connect(0, new EmitterFalse());
         gate.connect(1, new EmitterFalse());
         Assertions.assertFalse(gate.read());
     }
 
     @Test
-    public void whenReceivingFalseAndTrueShouldReturnTrue() {
-        OrGate gate = new OrGate();
+    public void whenReceivingFalseAndTrueShouldReturnFalse() {
+        AndGate gate = new AndGate();
         gate.connect(0, new EmitterFalse());
         gate.connect(1, new EmitterTrue());
-        Assertions.assertTrue(gate.read());
+        Assertions.assertFalse(gate.read());
     }
 
     @Test
-    public void whenReceivingTrueAndFalseShouldReturnTrue() {
-        OrGate gate = new OrGate();
+    public void whenReceivingTrueAndFalseShouldReturnFalse() {
+        AndGate gate = new AndGate();
         gate.connect(0, new EmitterTrue());
         gate.connect(1, new EmitterFalse());
-        Assertions.assertTrue(gate.read());
+        Assertions.assertFalse(gate.read());
     }
 
     @Test
     public void whenReceivingTrueAndTrueShouldReturnTrue() {
-        OrGate gate = new OrGate();
+        AndGate gate = new AndGate();
         gate.connect(0, new EmitterTrue());
         gate.connect(1, new EmitterTrue());
         Assertions.assertTrue(gate.read());

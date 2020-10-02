@@ -1,4 +1,4 @@
-package br.pro.hashi.ensino.desagil.aps.model;
+package br.pro.hashi.ensino.deagil.aps.model;
 
 public class Light implements Receiver {
     @Override
