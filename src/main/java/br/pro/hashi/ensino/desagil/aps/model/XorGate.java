@@ -26,6 +26,7 @@ public class XorGate extends Gate{
     }
 
 
+
     @Override
     public boolean read() {
         return nandOut.read();
