@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class NandGateTest {
-    @Test
+
     public void whenReceivingFalseAndFalseShouldReturnTrue() {
         NandGate gate = new NandGate();
         gate.connect(0, new EmitterFalse());

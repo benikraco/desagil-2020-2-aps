@@ -5,7 +5,6 @@ public class NotGate extends Gate {
 
     public NotGate() {
         super("NOT", 1);
-
         nand = new NandGate();
     }
 
@@ -23,3 +22,4 @@ public class NotGate extends Gate {
         nand.connect(1, emitter);
     }
 }
+
