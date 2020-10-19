@@ -1,9 +1,5 @@
 package br.pro.hashi.ensino.deagil.aps.model;
 
-import br.pro.hashi.ensino.deagil.aps.model.Emitter;
-import br.pro.hashi.ensino.deagil.aps.model.Gate;
-import br.pro.hashi.ensino.deagil.aps.model.NandGate;
-
 public class XorGate extends Gate {
     private final NandGate nandMid;
     private final NandGate nandTop;
@@ -30,7 +26,6 @@ public class XorGate extends Gate {
     }
 
 
-
     @Override
     public boolean read() {
         return nandOut.read();
@@ -39,13 +34,13 @@ public class XorGate extends Gate {
     @Override
     public void connect(int inputIndex, Emitter emitter) {
 
-        switch (inputIndex){
+        switch (inputIndex) {
             case 0:
                 nandMid.connect(0, emitter);
-                nandTop.connect(0,emitter);
+                nandTop.connect(0, emitter);
                 break;
             case 1:
-                nandMid.connect(1,emitter);
+                nandMid.connect(1, emitter);
                 nandBottom.connect(1, emitter);
                 break;
             default:

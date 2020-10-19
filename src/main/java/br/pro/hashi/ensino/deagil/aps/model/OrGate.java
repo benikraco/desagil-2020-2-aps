@@ -6,7 +6,7 @@ public class OrGate extends Gate {
     private final NandGate nandAB;
 
 
-    public OrGate  () {
+    public OrGate() {
         super("OR", 2);
         nandA = new NandGate();
         nandB = new NandGate();
@@ -24,14 +24,14 @@ public class OrGate extends Gate {
 
     @Override
     public void connect(int inputIndex, Emitter emitter) {
-        switch (inputIndex){
+        switch (inputIndex) {
             case 0:
-                nandA.connect(0,emitter);
+                nandA.connect(0, emitter);
                 nandA.connect(1, emitter);
                 break;
             case 1:
-                nandB.connect(0,emitter);
-                nandB.connect(1,emitter);
+                nandB.connect(0, emitter);
+                nandB.connect(1, emitter);
                 break;
             default:
                 throw new IndexOutOfBoundsException(inputIndex);

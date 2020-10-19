@@ -4,11 +4,11 @@ public class AndGate extends Gate {
     private final NandGate nandFirst;
     private final NandGate nandSecond;
 
-    public AndGate () {
+    public AndGate() {
         super("AND", 2);
 
         nandFirst = new NandGate();
-        nandSecond=new NandGate();
+        nandSecond = new NandGate();
 
         nandSecond.connect(0, nandFirst);
         nandSecond.connect(1, nandFirst);
@@ -22,12 +22,12 @@ public class AndGate extends Gate {
 
     @Override
     public void connect(int inputIndex, Emitter emitter) {
-        if (inputIndex > 1 || inputIndex <0 ) {
+        if (inputIndex > 1 || inputIndex < 0) {
             throw new IndexOutOfBoundsException(inputIndex);
         }
-        nandFirst.connect(inputIndex,emitter);
-        }
+        nandFirst.connect(inputIndex, emitter);
     }
+}
 
 
 
