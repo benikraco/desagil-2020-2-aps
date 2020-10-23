@@ -17,3 +17,5 @@ public class FixedPanel extends JPanel {
     }
 
 }
+
+

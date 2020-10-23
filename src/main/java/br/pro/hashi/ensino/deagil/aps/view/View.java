@@ -27,7 +27,6 @@ public class View extends JPanel implements ActionListener {
 
         menu.addActionListener(this);
 
-
     }
 
     private void addGateView(int index) {

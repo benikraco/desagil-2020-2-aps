@@ -8,11 +8,18 @@ public class Switch implements Emitter {
     }
 
     public void turnOn() {
+
         signal = true;
+    }
+
+    public void turnOff() {
+
+        signal = false;
     }
 
     @Override
     public boolean read() {
+
         return signal;
     }
 }
